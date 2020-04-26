@@ -19,7 +19,7 @@ $width_toggle_circle: 25px;
     box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
 }
 
-.check {
+.switch-check {
     position: absolute;
     display: block;
     cursor: pointer;
@@ -31,11 +31,11 @@ $width_toggle_circle: 25px;
     z-index: 6;
 }
 
-.check:checked ~ .track {
+.switch-check:checked ~ .track {
     box-shadow: inset 0 0 0 100px $blue;
 }
 
-.check:checked ~ .switch {
+.switch-check:checked ~ .switch {
     right: 2px;
     left: $width_toggle_circle;
     transition: 0.35s cubic-bezier(0.785, 0.135, 0.15, 0.86);

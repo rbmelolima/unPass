@@ -11,7 +11,7 @@ footer {
 
     p {
         font-family: "Playfair Display";
-        font-size: 24px;
+        font-size: 16px;
     }
 }
 
@@ -24,18 +24,19 @@ body {
 main section.section_header {
     box-sizing: border-box;
     display: grid;
+    gap: 0;
     grid-template-columns: 1fr 1fr;
 
     @media screen and (max-width: 850px) {
         grid-template-rows: auto;
-        grid-template-columns: 1fr;
+        grid-template-columns: 100%;
     }
 }
 
 .illustration-container,
 .generator-container {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .illustration-container {
@@ -48,7 +49,7 @@ main section.section_header {
     justify-content: center;
     margin: 0 auto;
 
-    padding: 25px;
+    padding: 0 25px;
 
     h1 {
         font-size: 32px;
@@ -58,7 +59,7 @@ main section.section_header {
 
 .link {
     position: absolute;
-    bottom: 10px;
+    bottom: 80px;
     left: calc(50% - 25px);
 
     width: 25px;
