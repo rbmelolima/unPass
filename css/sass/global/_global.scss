@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/Open_Sans/OpenSans-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../../assets/fonts/Open_Sans/OpenSans-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf");
+    font-weight: 400;
+}
+
+h1,
+h2 {
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+
+h3,
+h4,
+h5,
+h6,
+p,
+input,
+button,
+a,
+span {
+    font-family: "Open Sans";
+}
+
+body {
+    line-height: 1.6rem;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button,
+a {
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+html {
+    scroll-behavior: smooth;
+}

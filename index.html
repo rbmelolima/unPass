@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>unPass | Gerador de senhas humanas</title>
+</head>
+
+<body>
+    <main>
+        <section class="section_header">
+            <div class="illustration-container">
+                <div>
+                    <div class="img-container">
+                        <img src="./assets/images/unlock.svg">
+                    </div>
+
+                    <h1>unPass </h1>
+                    <p>
+                        Diga adeus para as senhas difíceis de lembrar!
+                        <br>
+                        O unPass cria senhas fortes e seguras para
+                        usar a qualquer momento e em qualquer lugar.
+                    </p>
+                </div>
+
+                <a href="#generator-container" class="link">
+                    <img src="./assets/images/down.svg" />
+                </a>
+
+            </div>
+
+            <div class="generator-container" id="generator-container">
+                <form class="form-container">
+                    <h2>Gerador de senhas aleatórias </h2>
+
+                    <input class="input" readonly value="4897897">
+
+                    <div class="options">
+                        <div class="switch-container">
+                            <div class="toggle">
+                                <input type="radio" name="switch-option-pass" class="check">
+                                <b class="b switch"></b>
+                                <b class="b track"></b>
+                            </div>
+                        </div>
+                        <p>Fácil de lembrar</p>
+                    </div>
+
+                    <div class="options">
+                        <div class="switch-container">
+                            <div class="toggle">
+                                <input type="radio" name="switch-option-pass" class="check">
+                                <b class="b switch"></b>
+                                <b class="b track"></b>
+                            </div>
+                        </div>
+                        <p>Apenas números</p>
+                    </div>
+
+
+                    <div class="options">
+                        <div class="switch-container">
+                            <div class="toggle">
+                                <input type="radio" name="switch-option-pass" class="check">
+                                <b class="b switch"></b>
+                                <b class="b track"></b>
+                            </div>
+                        </div>
+                        <p>Personalizado</p>
+                    </div>
+
+                    <div class="range-container">
+                        <p>
+                            Tamanho da senha:
+                            <span></span>
+                        </p>
+                        <input type="range" value="30" min="6" max="50" class="_ranger">
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" class="button button-secundary">
+                            Copiar senha
+                        </button>
+
+                        <button type="button" class="button button-primary">
+                            Gerar senha
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section>
+            <!-- Explicando como funciona uma senha segura -->
+        </section>
+    </main>
+
+    <footer>
+        <p>unPass | Gerador de senhas humanas</p>
+    </footer>
+
+    <script src="./js/unpass.js"></script>
+</body>
+
+</html>

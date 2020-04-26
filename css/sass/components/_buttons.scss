@@ -1,0 +1,42 @@
+.button {
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.button-secundary {
+    border: 1px solid $yellow;
+    color: $yellow;
+
+    &:hover {
+        color: $white;
+        background-color: $yellow;
+    }
+}
+
+.button-primary {
+    background-color: $blue;
+    color: #fff;
+
+    &:hover {
+        background-color: $dark_blue;
+    }
+}
+
+.button-group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    margin-top: 32px;
+
+    .button{
+        margin-right: 16px;
+    }
+}
