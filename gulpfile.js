@@ -8,12 +8,20 @@ sass.compiler = require('node-sass');
 
 gulp.task('default', watch);
 gulp.task('sassprod', minifyScss);
+gulp.task('dev', expandedCss);
 
 function minifyScss() {
     return gulp
         .src("css/sass/style.scss")
         .pipe(rename('style.min.css'))
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+        .pipe(gulp.dest("css"));
+};
+
+function expandedCss() {
+    return gulp
+        .src("css/sass/style.scss")
+        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
         .pipe(gulp.dest("css"));
 };
 
