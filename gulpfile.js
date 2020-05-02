@@ -3,14 +3,17 @@
 const gulp = require('gulp');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
+const minify = require('gulp-minify');
+
 
 sass.compiler = require('node-sass');
 
-gulp.task('default', watch);
-gulp.task('sassprod', minifyScss);
-gulp.task('dev', expandedCss);
+gulp.task('sass', watchSass);
+gulp.task('minifyCss', minifyCss);
+gulp.task('expandedCss', expandedCss);
+gulp.task('js', minifyJs);
 
-function minifyScss() {
+function minifyCss() {
     return gulp
         .src("css/sass/style.scss")
         .pipe(rename('style.min.css'))
@@ -25,8 +28,13 @@ function expandedCss() {
         .pipe(gulp.dest("css"));
 };
 
-function watch() {
-    gulp.watch("css/sass/**/*.scss", minifyScss);
+function watchSass() {
+    gulp.watch("css/sass/**/*.scss", minifyCss);
 }
 
-//Para executar o gulp basta digitar "gulp" no terminal
+function minifyJs() {
+    return gulp
+        .src('./js/unpass.js')
+        .pipe(minify())
+        .pipe(gulp.dest('./js'));
+}
