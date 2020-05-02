@@ -36,12 +36,12 @@
                 <form class="form-container">
                     <h2>Gerador de senhas aleatórias </h2>
 
-                    <input class="input" readonly value="4897897">
+                    <input class="input" id="password-read" readonly>
 
                     <div class="options">
                         <div class="switch-container">
                             <div class="toggle">
-                                <input type="radio" name="switch-option-pass" class="switch-check">
+                                <input type="radio" name="switch-option-pass" class="switch-check" value="easy-remember">
                                 <b class="b switch"></b>
                                 <b class="b track"></b>
                             </div>
@@ -52,7 +52,7 @@
                     <div class="options">
                         <div class="switch-container">
                             <div class="toggle">
-                                <input type="radio" name="switch-option-pass" class="switch-check">
+                                <input type="radio" name="switch-option-pass" class="switch-check" value="only-number">
                                 <b class="b switch"></b>
                                 <b class="b track"></b>
                             </div>
@@ -64,7 +64,7 @@
                     <div class="options">
                         <div class="switch-container">
                             <div class="toggle">
-                                <input type="radio" name="switch-option-pass" class="switch-check">
+                                <input type="radio" name="switch-option-pass" class="switch-check" value="pass-hash">
                                 <b class="b switch"></b>
                                 <b class="b track"></b>
                             </div>
@@ -78,14 +78,14 @@
                             <span></span>
                         </p>
                         <input type="range" value="30" min="6" max="50" class="_ranger">
-                    </div>                    
+                    </div>
 
                     <div class="button-group">
-                        <button type="button" class="button button-secundary">
+                        <button type="button" class="button button-secundary" id="button-copy">
                             Copiar senha
                         </button>
 
-                        <button type="button" class="button button-primary">
+                        <button type="button" class="button button-primary" id="button-generatePass">
                             Gerar senha
                         </button>
                     </div>

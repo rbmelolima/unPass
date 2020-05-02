@@ -7,11 +7,11 @@ footer {
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;   
 
     p {
         font-family: "Playfair Display";
-        font-size: 16px;
+        font-size: 20px;
     }
 }
 
@@ -115,7 +115,8 @@ main section.section_header {
 
 .form-container .input {
     width: calc(100% - 3px);
-    height: 2.4rem;
+    height: 3rem;
+    padding: 5px;
 
     margin-bottom: 32px;
 
@@ -138,7 +139,7 @@ main section.section_header {
 
 .form-container .range-container {
     width: 100%;
-
+    display: none;
     margin-top: 32px;
 
     input {
