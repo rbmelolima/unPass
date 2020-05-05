@@ -1,30 +1,24 @@
 @font-face {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     src: url("../../../assets/fonts/Open_Sans/OpenSans-Regular.ttf");
-    font-weight: 400;
+    font-weight: normal;
 }
 
 @font-face {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     src: url("../../../assets/fonts/Open_Sans/OpenSans-Bold.ttf");
     font-weight: bold;
 }
 
 @font-face {
-    font-family: 'Playfair Display', serif;
-    src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Bold.ttf");
-    font-weight: bold;
-}
-
-@font-face {
-    font-family: 'Playfair Display', serif;
-    src: url("../../../assets/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
-    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    src: url("../../../assets/fonts/Open_Sans/OpenSans-Light.ttf");
+    font-weight: 300;
 }
 
 h1,
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold;
 }
 
@@ -38,7 +32,7 @@ button,
 label,
 a,
 span {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 body {
