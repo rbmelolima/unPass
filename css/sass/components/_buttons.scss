@@ -11,12 +11,11 @@
 }
 
 .button-secundary {
-    border: 1px solid $yellow;
-    color: $yellow;
+    border: 1px solid $white;
+    color: $blue;
 
     &:hover {
-        color: $white;
-        background-color: $yellow;
+        border: 1px solid $blue;
     }
 }
 
@@ -36,7 +35,7 @@
 
     margin-top: 32px;
 
-    .button{
+    .button {
         margin-right: 16px;
     }
 }

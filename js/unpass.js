@@ -2,6 +2,30 @@ const generateButton = document.querySelector('#button-generatePass');
 const copyButton = document.querySelector('#button-copy');
 
 let passwordRead = document.getElementById('password-read');
+let custom = document.getElementById('customizable-container');
+let switchs = document.getElementsByName('switch-option-pass');
+let checks = document.getElementsByName('password-caractere');
+let length = document.querySelector('#length-password');
+let lengthVisor = document.querySelector('#length-password-visor');
+
+
+for (let i = 0; i < switchs.length; i++) {
+    switchs[i].addEventListener('click', () => {
+        if (switchs[i].value != 'pass-hash')
+            custom.classList.remove('show');
+
+        else
+            custom.classList.add('show');
+    });
+}
+
+window.addEventListener("load", function (event) {
+    lengthVisor.innerHTML = length.value;
+});
+
+length.addEventListener('change', () => {
+    lengthVisor.innerHTML = length.value;
+});
 
 copyButton.addEventListener('click', function (event) {
     event.preventDefault();
@@ -16,20 +40,44 @@ generateButton.addEventListener('click', function (event) {
     let options = document.getElementsByName('switch-option-pass');
     let optionChecked;
 
-    for (let i = 0; i < options.length; i++) {
-        if (options[i].checked) {
+    for (let i = 0; i < options.length; i++)
+        if (options[i].checked)
             optionChecked = options[i].value;
-        }
-    }
 
-    if (optionChecked === 'easy-remember') {
+
+    if (optionChecked === 'easy-remember')
         passwordRead.value = easyRemember();
-    }
 
-    if (optionChecked === 'only-number') {
+
+    if (optionChecked === 'only-number')
         passwordRead.value = randomNumber();
-    }
 
+
+    if (optionChecked === 'pass-hash') {
+        let _symbols = false;
+        let _upper = false;
+        let _lower = false;
+        let _number = false;
+
+        for (let i = 0; i < checks.length; i++) {
+            if (checks[i].checked)
+                switch (checks[i].value) {
+                    case 'uppercase':
+                        _upper = true;
+                        break;
+                    case 'lowercase':
+                        _lower = true;
+                        break;
+                    case 'numbers':
+                        _number = true;
+                        break;
+                    case 'symbols':
+                        _symbols = true;
+                        break;
+                }
+        }
+        passwordRead.value = randomHash(_number, _upper, _lower, _symbols, length.value);
+    }
 });
 
 
@@ -64,11 +112,11 @@ function randomHash(numbers, uppercase, lowercase, symbols, length) {
 }
 
 function easyRemember() {
-    let separator = Math.floor(Math.random() * 100 + 1);
+    let separator = Math.floor(Math.random() * 999 + 1);
     let index1 = returnIndex(dicionary.length);
     let index2 = returnIndex(dicionary.length);
     password = dicionary[index1] + separator + dicionary[index2];
-    return password;
+    return password.trim();
 }
 
 function returnIndex(length) {

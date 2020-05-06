@@ -25,13 +25,9 @@
                         usar a qualquer momento e em qualquer lugar.
                     </p>
                 </div>
-
-                <a href="#gerador-de-senhas" class="link">
-                    <img src="./assets/images/down.svg" />
-                </a>
             </div>
 
-            <div class="generator-container" id="gerador-de-senhas">
+            <div class="generator-container">
                 <form class="form-container">
                     <h2>Gerador de senhas aleatórias </h2>
 
@@ -40,8 +36,8 @@
                     <div class="options">
                         <div class="switch-container">
                             <div class="toggle">
-                                <input type="radio" name="switch-option-pass" class="switch-check"
-                                    value="easy-remember">
+                                <input type="radio" name="switch-option-pass" class="switch-check" value="easy-remember"
+                                    checked>
                                 <b class="b switch"></b>
                                 <b class="b track"></b>
                             </div>
@@ -72,35 +68,42 @@
                         <p>Personalizado</p>
                     </div>
 
-                    <div class="range-container">
-                        <p>
-                            Tamanho da senha:
-                            <span></span>
-                        </p>
-                        <input type="range" value="30" min="6" max="50" class="_ranger">
+                    <div id="customizable-container">
+                        <div class="range-container">
+                            <p>
+                                Tamanho da senha:
+                                <span id="length-password-visor"></span>
+                            </p>
+                            <input type="range" value="8" min="4" max="30" class="_ranger" id="length-password">
+                        </div>
+
+                        <div class="checkbox-group">
+                            <label class="checkbox-container">
+                                ABC
+                                <input type="checkbox" value="uppercase" name="password-caractere">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">
+                                abc
+                                <input type="checkbox" value="lowercase" name="password-caractere">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">
+                                012
+                                <input type="checkbox" value="numbers" name="password-caractere">
+                                <span class="checkmark"></span>
+                            </label>
+
+                            <label class="checkbox-container">
+                                !@#
+                                <input type="checkbox" value="symbols" name="password-caractere">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
                     </div>
 
-                    <div class="checkbox-group">
-                        <label class="checkbox-container">ABC
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="checkbox-container">abc
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="checkbox-container">012
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-
-                        <label class="checkbox-container">!@#
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
 
                     <div class="button-group">
                         <button type="button" class="button button-secundary" id="button-copy">
@@ -113,10 +116,6 @@
                     </div>
                 </form>
             </div>
-        </section>
-
-        <section>
-            <!-- Explicando como funciona uma senha segura -->
         </section>
     </main>
 

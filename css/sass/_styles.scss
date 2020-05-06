@@ -61,29 +61,6 @@ main section.section_header {
     margin: 0 auto;
 }
 
-
-.link {
-    position: absolute;
-    bottom: 80px;
-    left: calc(50% - 25px);
-
-    width: 25px;
-
-    text-decoration: none;
-    outline: none;
-    background-color: transparent;
-    outline: none;
-
-    img {
-        width: 100%;
-    }
-
-    visibility: hidden;
-    @media screen and (max-width: 850px) {
-        visibility: visible;
-    }
-}
-
 .illustration-container .img-container {
     margin-bottom: 50px;
 
@@ -150,4 +127,12 @@ main section.section_header {
     input {
         width: 100%;
     }
+}
+
+#customizable-container{
+    display: none;
+}
+
+.show{
+    display: block !important;
 }
