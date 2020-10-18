@@ -1,28 +1,26 @@
-# unPass
+# :page_with_curl: Sobre
 O unPass foi criado com a intenção de gerar senhas aleatórias para que o usuário utilize em suas aplicações. O seu diferencial
 é criar senhas também fáceis de serem lembradas por seres humanos, afinal "enguia845Jambo" é uma senha extremamente forte e facilmente lembrável.
 
-## Começando
-Para configurar esse projeto em sua máquina deve ter instalado o npm
+## :hammer: Instalação
 
-Clone o projeto:
+````bash
+# Clone este projeto
+$ git clone https://github.com/rbmelolima/unPass
 
-`git clone https://github.com/rbmelolima/unPass.git`
+# Instale as dependências
+$ yarn 
 
-Instalar todas as dependências:
-
-`npm start`
-
-Execute o gulp:
-
-`gulp sass`
+# Execute o SASS
+$ gulp sass
+````
 
 ## Próximas features
-- Aumento na quantidade de palavras que compôem o dicionário de palavras
+- [ ] Aumento na quantidade de palavras que compôem o dicionário de palavras
 
-- Verificar força da senha automaticamente
+- [ ] Verificar força da senha automaticamente
 
-- Guia explicativo de como construir senhas fortes e seguras
+- [ ] Guia explicativo de como construir senhas fortes e seguras
 
 
 ## Sites referência: 
